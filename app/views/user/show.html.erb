@@ -1,0 +1,19 @@
+<body>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="container">
+    <h1>A propos de <%=@user.first_name%></h1>
+    <ul>
+        <li>Prénom : <%=@user.first_name%></li>
+        <li>Nom : <%=@user.last_name%></li>
+        <li>Age : <%=@user.age%></li>
+        <li>Email : <%=@user.email%></li>
+        <li>Ville : <%=@user.city.name%> <%=@user.city.zip_code%> </li>
+    </ul>
+  </div>
+  <div class="container">
+      <button type="button" class="btn btn-danger"><%= link_to "Revenir à l'accueil", root_path %></button>
+  </div>
+</body>

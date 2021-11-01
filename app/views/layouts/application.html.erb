@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Website Title -->
+    <title>GossipApp</title>
+    <!-- Required meta tags -->
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <!-- Favicons -->
+    <!-- <link rel="icon" href="assets/favicon.ico" sizes="16x16" type="image/x-icon"/> -->
+
+    <!-- CDN : Bootstrap CSS only -->
+    <!-- !!!! WARNING : ajouter les CDN BOOTSTRAP avant les autres fichiers CSS, afin que mes styles remplacent ceux de Bootstrap par défaut -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+
+    <!-- Core css and js -->
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-3">
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="#">Gossip</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto my-2 my-lg-0 align-items-center">
+            <li class="nav-item"><%= link_to "Les gossips", root_path %></li>
+            <li class="nav-item"><%= link_to "La team Gossip", team_path %></li>
+            <li class="nav-item"><%= link_to "Nous contacter", contact_path %></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Footer-->
+    <footer class="bg-light py-3">
+      <div class="container px-4 px-lg-5">
+        <div class="small text-center text-muted">Copyright &copy; 2021 - Kev@THP</div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Fontawesome icons -->
+    <script src="https://kit.fontawesome.com/47692adf37.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+
+    <!-- Optional JavaScript to put just before </body> -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  </body>
+</html>

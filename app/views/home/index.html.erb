@@ -1,0 +1,28 @@
+<body class="text-center">
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="container">
+    <h1>Bienvenue sur Gossip !</h1>
+    <p>Tu retrouveras ici l'ensemble des gossips.</p>
+  </div>
+  <!-- cards -->
+  <div class="album py-5">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <% @gossips.each_with_index do |gossip, index| %>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="card-header text-center pb-1 text-warning"><h4>Gossip n°<%=index + 1%></h4></div>
+              <div class="card-body text-center">
+                <h3 class="card-title">Created by <%=gossip.user.first_name%></h3>
+                <p class="card-text"><%=gossip.title%></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</body>
