@@ -11,9 +11,15 @@
         <li>Age : <%=@user.age%></li>
         <li>Email : <%=@user.email%></li>
         <li>Ville : <%=@user.city.name%> <%=@user.city.zip_code%> </li>
+        <li>Nombre de gossips : <%=@user.gossips.count%> gossip(s)</li>
+        <li>Nombre de likes : <%=@user.likes.count%> like(s)</li>
     </ul>
   </div>
-  <div class="container">
+  <br/>
+  <br/>
+  <div class="container text-center">
       <button type="button" class="btn btn-danger"><%= link_to "Revenir à l'accueil", root_path %></button>
   </div>
+  <br/>
+  <br/>
 </body>

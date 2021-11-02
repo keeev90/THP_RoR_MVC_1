@@ -6,8 +6,6 @@
     <!-- Required meta tags -->
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <!-- Favicons -->
-    <!-- <link rel="icon" href="assets/favicon.ico" sizes="16x16" type="image/x-icon"/> -->
 
     <!-- CDN : Bootstrap CSS only -->
     <!-- !!!! WARNING : ajouter les CDN BOOTSTRAP avant les autres fichiers CSS, afin que mes styles remplacent ceux de Bootstrap par défaut -->
@@ -18,16 +16,14 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
-
+  <header>
     <!-- Navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-3">
-      <div class="container px-4 px-lg-5">
+      <div class="container px-4 px-lg-5 justify-content-around">
         <a class="navbar-brand" href="#">Gossip</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ms-auto my-2 my-lg-0 align-items-center">
+          <ul class="navbar-nav ms-auto my-2 my-lg-0">
             <li class="nav-item"><%= link_to "Les gossips", root_path %></li>
             <li class="nav-item"><%= link_to "La team Gossip", team_path %></li>
             <li class="nav-item"><%= link_to "Nous contacter", contact_path %></li>
@@ -35,6 +31,10 @@
         </div>
       </div>
     </nav>
+  </header>
+
+  <body>
+    <%= yield %>
 
     <!-- Footer-->
     <footer class="bg-light py-3">

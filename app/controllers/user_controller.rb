@@ -5,7 +5,6 @@ class UserController < ApplicationController
     puts  @user_id = params[:user_id]
     puts "#" * 60
 
-    @users = User.all
-    @user = @users.find_by(id: @user_id) #pour cibler plus vite le user concerné dans la base de donnée 
+    @user = User.find(@user_id) #pour cibler plus vite le user concerné dans la base de donnée 
   end
 end

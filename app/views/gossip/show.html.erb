@@ -1,25 +1,34 @@
-<div class="container">
-  <div class="card">
-    <div class="card-header">
-      <h1>Gossip n°<%=@gossip.id%></h1>
-    </div>
-    <div class="card-body">
-      <h2 class="card-title">Titre : <%=@gossip.title%></h2>
-      <p class="card-text">
-        <ul>
-          <li>Contenu : <%=@gossip.content%></li>
-          <li>Créé le : <%=@gossip.created_at%></li>
-          <li>Auteur : <%=@gossip.user.first_name%> <%=@gossip.user.last_name%></li>
-        </ul>
-      </p>
-    </div>
-    <div class="card-footer">
-      <button type="button" class="btn btn-primary"><%= link_to "A propos de l'auteur", user_path(@gossip.user.id) %></button>
+<body>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h1>Gossip n°<%=@gossip.id%></h1>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title">Titre : <%=@gossip.title%></h2>
+        <p class="card-text">
+          <ul>
+            <li>Contenu : <%=@gossip.content%></li>
+            <li>Créé le : <%=@gossip.created_at%></li>
+            <li>Auteur : <%=@gossip.user.first_name%> <%=@gossip.user.last_name%></li>
+          </ul>
+        </p>
+      </div>
+      <div class="card-footer">
+        <button type="button" class="btn btn-secondary"><%= link_to "A propos de l'auteur", user_path(@gossip.user.id) %></button>
+      </div>
     </div>
   </div>
-</div>
-
-<div class="container">
-    <button type="button" class="btn btn-danger"><%= link_to "Revenir à l'accueil", root_path %></button>
-</div>
+  <br/>
+  <br/>
+  <div class="container text-center">
+      <button type="button" class="btn btn-danger"><%= link_to "Revenir à l'accueil", root_path %></button>
+  </div>
+  <br/>
+  <br/>
+</body>
 
